@@ -1,5 +1,17 @@
+#include "Events.h"
+#include "Hooks.h"
+
 namespace
 {
+	// void MessageHandler(SKSE::MessagingInterface::Message* a_msg)
+	// {
+	// 	switch (a_msg->type) {
+	// 	case SKSE::MessagingInterface::kDataLoaded:
+	// 		Events::Register();
+	// 		break;
+	// 	}
+	// }
+
 	void InitializeLog()
 	{
 #ifndef NDEBUG
@@ -46,7 +58,17 @@ extern "C" DLLEXPORT bool SKSEAPI SKSEPlugin_Load(const SKSE::LoadInterface* a_s
 	InitializeLog();
 	logger::info("{} v{}"sv, Plugin::NAME, Plugin::VERSION.string());
 
+	Settings::LoadSettings();
+
 	SKSE::Init(a_skse);
+	SKSE::AllocTrampoline(1 << 6);
+
+	// auto message = SKSE::GetMessagingInterface();
+	// if (!message->RegisterListener(MessageHandler)) {
+	// 	return false;
+	// }
+
+	Hooks::Install();
 
 	return true;
 }

@@ -1,4 +1,6 @@
 This is a basic plugin template for use with CommonLibSSE
+## Based on work by [Ryan-rsm-McKenzie](https://github.com/Ryan-rsm-McKenzie)
+* [ExamplePlugin-CommonLibSSE](https://github.com/Ryan-rsm-McKenzie/ExamplePlugin-CommonLibSSE)
 
 ## Requirements
 * [CMake](https://cmake.org/)
@@ -9,6 +11,11 @@ This is a basic plugin template for use with CommonLibSSE
 	* Add the environment variable `VCPKG_ROOT` with the value as the path to the folder containing vcpkg
 * [Visual Studio Community 2022](https://visualstudio.microsoft.com/)
 	* Desktop development with C++
+
+## Build Dependencies (handled by vcpkg and git submodule)
+* [CommonLibSSE](https://github.com/Ryan-rsm-McKenzie/CommonLibSSE)
+* [Json2Settings](https://github.com/Ryan-rsm-McKenzie/Json2Settings)
+* [JSON for Modern C++](https://github.com/nlohmann/json)
 
 ## Building
 ```

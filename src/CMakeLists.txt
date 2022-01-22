@@ -2,8 +2,15 @@ set(ROOT_DIR "${CMAKE_CURRENT_SOURCE_DIR}/..")
 
 set(SOURCE_DIR "${ROOT_DIR}/src")
 set(SOURCE_FILES
+	"${SOURCE_DIR}/Events.cpp"
+	"${SOURCE_DIR}/Events.h"
+	"${SOURCE_DIR}/Hooks.cpp"
+	"${SOURCE_DIR}/Hooks.h"
+	"${SOURCE_DIR}/Json2Settings.h"
 	"${SOURCE_DIR}/main.cpp"
 	"${SOURCE_DIR}/PCH.h"
+	"${SOURCE_DIR}/Settings.cpp"
+	"${SOURCE_DIR}/Settings.h"
 )
 
 source_group(TREE "${ROOT_DIR}" FILES ${SOURCE_FILES})
@@ -73,10 +80,13 @@ target_include_directories(
 
 add_subdirectory("${ROOT_DIR}/external/CommonLibSSE" CommonLibSSE EXCLUDE_FROM_ALL)
 
+find_package(nlohmann_json CONFIG REQUIRED)
+
 target_link_libraries(
 	"${PROJECT_NAME}"
 	PRIVATE
 		CommonLibSSE::CommonLibSSE
+		nlohmann_json::nlohmann_json
 )
 
 target_precompile_headers(

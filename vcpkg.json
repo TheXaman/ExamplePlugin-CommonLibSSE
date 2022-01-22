@@ -2,6 +2,7 @@
   "name": "example",
   "version": "1",
   "dependencies": [
+    "nlohmann-json",
     "boost-stl-interfaces",
     "rsm-binary-io",
     "spdlog"
