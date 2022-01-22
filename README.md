@@ -1,5 +1,5 @@
-This is a basic plugin template for use with CommonLibSSE
 ## Based on work by [Ryan-rsm-McKenzie](https://github.com/Ryan-rsm-McKenzie)
+* [FlatMapMarkersSSE](https://github.com/Ryan-rsm-McKenzie/FlatMapMarkersSSE)
 * [ExamplePlugin-CommonLibSSE](https://github.com/Ryan-rsm-McKenzie/ExamplePlugin-CommonLibSSE)
 
 ## Requirements
