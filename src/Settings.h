@@ -49,7 +49,7 @@
 		static inline bool enabled = false;
 
 	private:
-		static constexpr char FILE_NAME[] = "Data\\SKSE\\Plugins\\FlatMapMarkersSSE_AE.json";
+		static constexpr char FILE_NAME[] = "Data\\SKSE\\Plugins\\FlatMapMarkersSSE.json";
 		static Json2Settings::aSetting<WhiteListedWorldSpace> whiteListedWorldSpaces;
 	};
 
